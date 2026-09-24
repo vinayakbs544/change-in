@@ -1,8 +1,17 @@
 import subprocess
+import sys
 from pathlib import Path
 
+try:
+    count = int(sys.argv[1]) if len(sys.argv) > 1 else 5
+    if count < 1:
+        raise ValueError
+except ValueError:
+    print("Usage: python3 scripts/change_report.py [positive number]")
+    sys.exit(1)
+
 result = subprocess.run(
-    ["git", "log", "-5", "--pretty=format:%h | %an | %ad | %s", "--date=short"],
+    ["git", "log", f"-{count}", "--pretty=format:%h | %an | %ad | %s", "--date=short"],
     capture_output=True,
     text=True,
     check=True
