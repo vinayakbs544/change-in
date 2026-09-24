@@ -2,8 +2,12 @@ import subprocess
 import sys
 from pathlib import Path
 
+if len(sys.argv) > 2:
+    print("Usage: python3 scripts/change_report.py [positive number]")
+    sys.exit(1)
+
 try:
-    count = int(sys.argv[1]) if len(sys.argv) > 1 else 5
+    count = int(sys.argv[1]) if len(sys.argv) == 2 else 5
     if count < 1:
         raise ValueError
 except ValueError:
