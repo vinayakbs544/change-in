@@ -21,9 +21,12 @@ result = subprocess.run(
     check=True
 )
 
+commit_lines = result.stdout.splitlines()
+
 report = (
     "Recent Git Changes\n"
     "------------------\n"
+    f"Commits shown: {len(commit_lines)}\n"
     "COMMIT | AUTHOR | DATE | MESSAGE\n"
     f"{result.stdout}\n"
 )

@@ -1,8 +1,9 @@
 Recent Git Changes
 ------------------
+Commits shown: 5
 COMMIT | AUTHOR | DATE | MESSAGE
+4538d13 | vinayak | 2026-09-24 | validate report script arguments
 5905469 | vinayak | 2026-09-24 | support configurable commit count in report
 53e840c | vinayak | 2026-09-24 | refresh recent git changes report
 610acac | vinayak | 2026-09-24 | add recent git changes report
 c1382b0 | vinayak | 2026-09-24 | update deployment service version
-0b19037 | vinayak | 2026-09-24 | add logging configuration
